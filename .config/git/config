@@ -1,0 +1,55 @@
+[push]
+    default = simple
+    autosetupremote = true
+
+[merge]
+    conflictstyle = diff3
+
+[core]
+    longpaths = true
+    pager = delta
+
+[interactive]
+    diffFilter = delta --color-only
+
+[delta]
+    navigate = true    # use n and N to move between diff sections
+    light = false      # set to true if you're in a terminal w/ a light background color (e.g. the default macOS terminal)
+    side-by-side = true
+
+[diff]
+    colorMoved = default
+
+[alias]
+    co = checkout
+    br = branch
+    ci = commit
+    st = status
+    wt = worktree
+    df = diff
+    lg = log --date=local -p
+    cln = clean -dfx
+    brls = branch -vv
+    cobr = checkout -t -b
+    brlsa = branch -ar
+
+[branch]
+    autosetupmerge = true
+
+[log]
+    date = format-local:%Y-%m-%d %H:%M
+
+[rebase]
+    autoStash = true
+
+[include]
+  path = user
+  path = proxy
+
+[user]
+    name = Frizzell-Carlton, Russ
+    email = russ.frizzell-carlton@ge.com
+	signingkey = 4350D3ED37F9AA47
+
+[pull]
+    rebase = false

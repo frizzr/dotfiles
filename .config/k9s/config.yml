@@ -1,0 +1,393 @@
+k9s:
+  refreshRate: 2
+  maxConnRetry: 5
+  enableMouse: false
+  headless: false
+  logoless: false
+  crumbsless: false
+  readOnly: false
+  noExitOnCtrlC: false
+  noIcons: false
+  logger:
+    tail: 100
+    buffer: 5000
+    sinceSeconds: 60
+    fullScreenLogs: false
+    textWrap: false
+    showTime: false
+  currentContext: ent-prod-01
+  currentCluster: arn:aws:eks:us-east-1:237422925887:cluster/ent-prod-01
+  clusters:
+    arn:aws:eks:us-east-1:237422925887:cluster/ent-prod-01:
+      namespace:
+        active: devops-dashboard-blue
+        lockFavorites: false
+        favorites:
+        - devops-dashboard-blue
+        - devops-dashboard-dev
+        - default
+      view:
+        active: pod
+      featureGates:
+        nodeShell: false
+      shellPod:
+        image: busybox:1.35.0
+        command: []
+        args: []
+        namespace: default
+        limits:
+          cpu: 100m
+          memory: 100Mi
+      portForwardAddress: localhost
+    aws-arav:
+      namespace:
+        active: default
+        lockFavorites: false
+        favorites:
+        - all
+        - default
+      view:
+        active: pods
+      featureGates:
+        nodeShell: false
+      shellPod:
+        image: busybox:1.31
+        command: []
+        args: []
+        namespace: default
+        limits:
+          cpu: 100m
+          memory: 100Mi
+      portForwardAddress: localhost
+    aws-cicd:
+      namespace:
+        active: default
+        lockFavorites: false
+        favorites:
+        - all
+        - kube-system
+        - default
+      view:
+        active: pod
+      featureGates:
+        nodeShell: false
+      shellPod:
+        image: busybox:1.31
+        command: []
+        args: []
+        namespace: default
+        limits:
+          cpu: 100m
+          memory: 100Mi
+      portForwardAddress: localhost
+    aws-dtt-ana:
+      namespace:
+        active: all
+        lockFavorites: false
+        favorites:
+        - all
+        - default
+      view:
+        active: ctx
+      featureGates:
+        nodeShell: false
+      shellPod:
+        image: busybox:1.31
+        command: []
+        args: []
+        namespace: default
+        limits:
+          cpu: 100m
+          memory: 100Mi
+      portForwardAddress: localhost
+    aws-dtt-russ:
+      namespace:
+        active: all
+        lockFavorites: false
+        favorites:
+        - all
+        - amp
+        - default
+      view:
+        active: pod
+      featureGates:
+        nodeShell: false
+      shellPod:
+        image: busybox:1.31
+        command: []
+        args: []
+        namespace: default
+        limits:
+          cpu: 100m
+          memory: 100Mi
+      portForwardAddress: localhost
+    aws-dtt-util:
+      namespace:
+        active: all
+        lockFavorites: false
+        favorites:
+        - cattle-monitoring-system
+        - kube-system
+        - all
+        - default
+      view:
+        active: pod
+      featureGates:
+        nodeShell: false
+      shellPod:
+        image: busybox:1.31
+        command: []
+        args: []
+        namespace: default
+        limits:
+          cpu: 100m
+          memory: 100Mi
+      portForwardAddress: localhost
+    aws-mvc:
+      namespace:
+        active: kube-system
+        lockFavorites: false
+        favorites:
+        - kube-system
+        - default
+      view:
+        active: pods
+      featureGates:
+        nodeShell: false
+      shellPod:
+        image: busybox:1.31
+        command: []
+        args: []
+        namespace: default
+        limits:
+          cpu: 100m
+          memory: 100Mi
+      portForwardAddress: localhost
+    aws-pas-cicd:
+      namespace:
+        active: all
+        lockFavorites: false
+        favorites:
+        - all
+        - wams-analytics
+        - monitoring
+        - openldap
+        - gwr-oper
+        - site
+        - pgo
+        - uaa-pf
+        - uaa-oper
+      view:
+        active: statefulsets
+      featureGates:
+        nodeShell: false
+      shellPod:
+        image: busybox:1.31
+        command: []
+        args: []
+        namespace: default
+        limits:
+          cpu: 100m
+          memory: 100Mi
+      portForwardAddress: localhost
+    aws-pas-dev1:
+      namespace:
+        active: infinispan
+        lockFavorites: false
+        favorites:
+        - pf
+        - infinispan
+        - all
+        - osb
+        - wams-analytics
+        - default
+      view:
+        active: configmap
+      featureGates:
+        nodeShell: false
+      shellPod:
+        image: busybox:1.31
+        command: []
+        args: []
+        namespace: default
+        limits:
+          cpu: 100m
+          memory: 100Mi
+      portForwardAddress: localhost
+    aws-pas-dev2:
+      namespace:
+        active: wams-analytics
+        lockFavorites: false
+        favorites:
+        - all
+        - wams-analytics
+        - default
+      view:
+        active: helm
+      featureGates:
+        nodeShell: false
+      shellPod:
+        image: busybox:1.31
+        command: []
+        args: []
+        namespace: default
+        limits:
+          cpu: 100m
+          memory: 100Mi
+      portForwardAddress: localhost
+    aws-pas-qa:
+      namespace:
+        active: wams-analytics
+        lockFavorites: false
+        favorites:
+        - wams-analytics
+        - default
+      view:
+        active: po
+      featureGates:
+        nodeShell: false
+      shellPod:
+        image: busybox:1.31
+        command: []
+        args: []
+        namespace: default
+        limits:
+          cpu: 100m
+          memory: 100Mi
+      portForwardAddress: localhost
+    aws-qa:
+      namespace:
+        active: default
+        lockFavorites: false
+        favorites:
+        - kube-system
+        - default
+      view:
+        active: pod
+      featureGates:
+        nodeShell: false
+      shellPod:
+        image: busybox:1.31
+        command: []
+        args: []
+        namespace: default
+        limits:
+          cpu: 100m
+          memory: 100Mi
+      portForwardAddress: localhost
+    aws-rtlse-dev1:
+      namespace:
+        active: wams-rtlse
+        lockFavorites: false
+        favorites:
+        - all
+        - wams-rtlse
+        - default
+      view:
+        active: event
+      featureGates:
+        nodeShell: false
+      shellPod:
+        image: busybox:1.31
+        command: []
+        args: []
+        namespace: default
+        limits:
+          cpu: 100m
+          memory: 100Mi
+      portForwardAddress: localhost
+    aws-rtlse-dev3:
+      namespace:
+        active: wams-rtlse
+        lockFavorites: false
+        favorites:
+        - pf
+        - wams-rtlse
+        - default
+      view:
+        active: pod
+      featureGates:
+        nodeShell: false
+      shellPod:
+        image: busybox:1.31
+        command: []
+        args: []
+        namespace: default
+        limits:
+          cpu: 100m
+          memory: 100Mi
+      portForwardAddress: localhost
+    aws-rtlse-dev4:
+      namespace:
+        active: all
+        lockFavorites: false
+        favorites:
+        - all
+        - pgo
+        - pf
+        - osb
+        - wams-rtlse
+        - default
+      view:
+        active: secret
+      featureGates:
+        nodeShell: false
+      shellPod:
+        image: busybox:1.31
+        command: []
+        args: []
+        namespace: default
+        limits:
+          cpu: 100m
+          memory: 100Mi
+      portForwardAddress: localhost
+    aws-rtlse-devtest:
+      namespace:
+        active: wams-rtlse
+        lockFavorites: false
+        favorites:
+        - pf
+        - all
+        - osb
+        - wams-rtlse
+        - default
+      view:
+        active: pod
+      featureGates:
+        nodeShell: false
+      shellPod:
+        image: busybox:1.31
+        command: []
+        args: []
+        namespace: default
+        limits:
+          cpu: 100m
+          memory: 100Mi
+      portForwardAddress: localhost
+    microk8s-cluster:
+      namespace:
+        active: all
+        lockFavorites: false
+        favorites:
+        - default
+      view:
+        active: pod
+      featureGates:
+        nodeShell: false
+      shellPod:
+        image: busybox:1.31
+        command: []
+        args: []
+        namespace: default
+        limits:
+          cpu: 100m
+          memory: 100Mi
+      portForwardAddress: localhost
+  thresholds:
+    cpu:
+      critical: 90
+      warn: 70
+    memory:
+      critical: 90
+      warn: 70
+  screenDumpDir: /home/frizzr/k9s
