@@ -20,7 +20,7 @@ k9s:
   clusters:
     arn:aws:eks:us-east-1:237422925887:cluster/ent-prod-01:
       namespace:
-        active: devops-dashboard-blue
+        active: devops-dashboard-dev
         lockFavorites: false
         favorites:
         - devops-dashboard-blue
