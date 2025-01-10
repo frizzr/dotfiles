@@ -81,6 +81,7 @@ ulimit -S -n 1048576
 
 # Would you like to use another custom folder than $ZSH/custom?
 ZSH_CUSTOM="${HOME}/.config/zsh/custom"
+FZF_BASE=/home/linuxbrew/.linuxbrew/opt/fzf
 
 # Which plugins would you like to load?
 # Standard plugins can be found in $ZSH/plugins/
