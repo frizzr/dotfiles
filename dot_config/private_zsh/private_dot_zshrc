@@ -2,6 +2,7 @@ export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
 export GPG_TTY=$(tty)
 export GPG_AGENT_INFO=""
 eval $(keychain --eval --agents gpg)
+export cdpath=(. ~/repos/grid-platform/ ~/repos/shared ~/repos)
 
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
@@ -141,5 +142,6 @@ if [ -z "$RUNNING" ]; then
     disown
 fi
 
+bindkey -v
 # To customize prompt, run `p10k configure` or edit ~/.config/zsh/.p10k.zsh.
 [[ ! -f ~/.config/zsh/.p10k.zsh ]] || source ~/.config/zsh/.p10k.zsh
