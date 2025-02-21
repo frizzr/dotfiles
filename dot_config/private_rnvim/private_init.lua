@@ -102,6 +102,7 @@ require("lazy").setup({
 'will133/vim-dirdiff',
 'williamboman/mason.nvim',
 'williamboman/mason-lspconfig.nvim',
+'github/copilot.vim',
 'mfussenegger/nvim-dap',
 {
   'neovim/nvim-lspconfig',
